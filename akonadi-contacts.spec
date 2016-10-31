@@ -41,7 +41,7 @@ Akonadi Contacts Integration.
 #--------------------------------------------------------------------
 
 %define major 5
-%define libkname %mklibname KF5AkonadiContact %{major}
+%define libname %mklibname KF5AkonadiContact %{major}
 
 %package -n %{libname}
 Summary:      Akonadi Contacts Integration main library
