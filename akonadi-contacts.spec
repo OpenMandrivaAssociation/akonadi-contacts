@@ -24,7 +24,7 @@ BuildRequires:	cmake(KF5Contacts)
 BuildRequires:	cmake(KF5KIO)
 BuildRequires:	cmake(KF5Mime)
 BuildRequires:	cmake(KF5Prison)
-BuildRequires:  boost-devel
+BuildRequires:	boost-devel
 Obsoletes:	kdepimlibs-core < 3:16.08.2
 
 %description
