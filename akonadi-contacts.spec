@@ -13,7 +13,7 @@ BuildRequires:	pkgconfig(Qt5Test)
 BuildRequires:	pkgconfig(Qt5WebEngine)
 BuildRequires:	pkgconfig(Qt5WebEngineWidgets)
 BuildRequires:	pkgconfig(Qt5Widgets)
-
+BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(Grantlee5)
 BuildRequires:	cmake(KF5Akonadi)
 BuildRequires:	cmake(KF5AkonadiMime)
@@ -51,7 +51,7 @@ Group:        System/Libraries
 Akonadi Contacts Integration main library.
 
 %files -n %{libname}
-%{_libdir}/libKF5AkonadiContact.so.%{kf5akonadicontact_major}{,.*}
+%{_libdir}/libKF5AkonadiContact.so.%{major}*
 
 #--------------------------------------------------------------------
 
