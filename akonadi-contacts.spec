@@ -1,4 +1,5 @@
 Name:		akonadi-contacts
+Epoch:		3
 Version:	16.08.2
 Release:	1
 Summary:	Akonadi Contacts Integration
