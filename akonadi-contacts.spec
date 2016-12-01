@@ -26,7 +26,8 @@ BuildRequires:	cmake(KF5KIO)
 BuildRequires:	cmake(KF5Mime)
 BuildRequires:	cmake(KF5Prison)
 BuildRequires:	boost-devel
-Obsoletes:	kdepimlibs-core < 3:16.08.2
+Obsoletes:	kdepimlibs-core < 3:16.04.3-1
+Provides:	kdepimlibs-core = 3:16.04.3-1
 
 %description
 Akonadi Contacts Integration.
