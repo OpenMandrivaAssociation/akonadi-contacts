@@ -1,6 +1,6 @@
 Name:		akonadi-contacts
 Epoch:		3
-Version:	17.03.80
+Version:	17.04.0
 Release:	1
 Summary:	Akonadi Contacts Integration
 License:	GPLv2+ and LGPLv2+
@@ -42,7 +42,7 @@ Provides:	akonadi-social-utils-data = 3:16.04.3-2
 %description
 Akonadi Contacts Integration.
 
-%files
+%files -f %{name}.lang
 %{_datadir}/akonadicontact/
 %{_datadir}/kf5/akonadi/contact/
 %{_datadir}/kservices5/akonadi/contact/
@@ -98,3 +98,6 @@ based on %{name}.
 
 %install
 %ninja_install -C build
+%find_lang akonadicontact5
+%find_lang kcm_akonadicontact_actions
+cat *.lang >%{name}.lang
