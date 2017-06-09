@@ -1,7 +1,7 @@
 Name:		akonadi-contacts
 Epoch:		3
 Version:	17.04.0
-Release:	2
+Release:	3
 Summary:	Akonadi Contacts Integration
 License:	GPLv2+ and LGPLv2+
 Group:		Graphical desktop/KDE
@@ -33,11 +33,14 @@ BuildRequires:	cmake(KF5Mime)
 BuildRequires:	cmake(KF5Prison)
 BuildRequires:	boost-devel
 Conflicts:	kdepimlibs-core < 3:16.04.3-2
-Provides:	kdepimlibs-core = 3:16.04.3-1
-Obsoletes:	akonadi-contact-data < 3:16.04.3-2
-Provides:	akonadi-contact-data = 3:16.04.3-1
+Obsoletes:	kdepimlibs-core < 3:17.04.0
+Provides:	kdepimlibs-core = 3:17.04.0
+Obsoletes:	akonadi-contact-data < 3:17.04.0
+Conflicts:	akonadi-contact-data < 3:17.04.0
+Provides:	akonadi-contact-data = 3:17.04.0
+Obsoletes:	akonadi-social-utils-data < 3:17.04.0
 Conflicts:	akonadi-social-utils-data < 3:16.04.3-2
-Provides:	akonadi-social-utils-data = 3:16.04.3-1
+Provides:	akonadi-social-utils-data = 3:17.04.0
 
 %description
 Akonadi Contacts Integration.
