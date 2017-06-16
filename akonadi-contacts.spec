@@ -1,7 +1,7 @@
 Name:		akonadi-contacts
 Epoch:		3
-Version:	17.04.1
-Release:	2
+Version:	17.04.2
+Release:	1
 Summary:	Akonadi Contacts Integration
 License:	GPLv2+ and LGPLv2+
 Group:		Graphical desktop/KDE
