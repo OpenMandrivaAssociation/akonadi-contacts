@@ -1,6 +1,6 @@
 Name:		akonadi-contacts
 Epoch:		3
-Version:	17.04.3
+Version:	17.07.90
 Release:	1
 Summary:	Akonadi Contacts Integration
 License:	GPLv2+ and LGPLv2+
@@ -44,12 +44,15 @@ Provides:	akonadi-social-utils-data = 3:17.04.0
 Akonadi Contacts Integration.
 
 %files -f %{name}.lang
-%{_datadir}/akonadicontact/
 %{_datadir}/kf5/akonadi/contact/
 %{_datadir}/kservices5/akonadi/contact/
 %{_datadir}/kservices5/akonadicontact_actions.desktop
 %{_datadir}/kservicetypes5/kaddressbookimprotocol.desktop
 %{_qt5_plugindir}/kcm_akonadicontact_actions.so
+%{_sysconfdir}/xdg/akonadi-contacts.categories
+%{_sysconfdir}/xdg/contact-editor.categories
+%{_libdir}/qt5/plugins/akonadi/contacts/plugins/categorieseditwidgetplugin.so
+%{_datadir}/contacteditor
 
 #--------------------------------------------------------------------
 
@@ -68,6 +71,21 @@ Akonadi Contacts Integration main library.
 
 #--------------------------------------------------------------------
 
+%define major 5
+%define editorlibname %mklibname KF5ContactEditor %{major}
+
+%package -n %{editorlibname}
+Summary:      Akonadi Contacts Integration editor library
+Group:        System/Libraries
+
+%description -n %{editorlibname}
+Akonadi Contacts Integration editor library.
+
+%files -n %{editorlibname}
+%{_libdir}/libKF5ContactEditor.so.%{major}*
+
+#--------------------------------------------------------------------
+
 %define develname %mklibname KF5AkonadiContact -d
 
 %package -n %{develname}
@@ -75,6 +93,7 @@ Summary:        Devel stuff for %{name}
 Group:          Development/KDE and Qt
 Requires:       %{name} = %{EVRD}
 Requires:       %{libname} = %{EVRD}
+Requires:       %{editorlibname} = %{EVRD}
 
 %description -n %{develname}
 This package contains header files needed if you wish to build applications
@@ -83,10 +102,12 @@ based on %{name}.
 %files -n %{develname}
 %{_includedir}/KF5/Akonadi/Contact/
 %{_includedir}/KF5/akonadi/contact/
-%{_includedir}/KF5/*_version.h
 %{_libdir}/*.so
 %{_libdir}/cmake/KF5AkonadiContact/
 %{_libdir}/qt5/mkspecs/modules/*.pri
+%{_includedir}/KF5/ContactEditor
+%{_includedir}/KF5/contacteditor
+%{_libdir}/cmake/KF5ContactEditor
 
 #--------------------------------------------------------------------
 
