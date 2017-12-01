@@ -1,6 +1,6 @@
 Name:		akonadi-contacts
 Epoch:		3
-Version:	17.08.3
+Version:	17.11.90
 Release:	1
 Summary:	Akonadi Contacts Integration
 License:	GPLv2+ and LGPLv2+
@@ -52,7 +52,6 @@ Akonadi Contacts Integration.
 %{_sysconfdir}/xdg/akonadi-contacts.categories
 %{_sysconfdir}/xdg/contact-editor.categories
 %{_libdir}/qt5/plugins/akonadi/contacts/plugins/categorieseditwidgetplugin.so
-%{_datadir}/contacteditor
 
 #--------------------------------------------------------------------
 
