@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   akonadi-contacts-17.12.1.tar.xz: d2d07d73bc424f561105c337fdb9c705666b3579
+sources:
+  akonadi-contacts-17.12.2.tar.xz: 4574f5a5c30ed7e671c19ada467484dba9632e03
