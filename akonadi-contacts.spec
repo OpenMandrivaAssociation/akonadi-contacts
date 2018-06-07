@@ -1,6 +1,6 @@
 Name:		akonadi-contacts
 Epoch:		3
-Version:	 17.12.2
+Version:	 18.04.2
 Release:	1
 Summary:	Akonadi Contacts Integration
 License:	GPLv2+ and LGPLv2+
@@ -44,6 +44,11 @@ Provides:	akonadi-social-utils-data = 3:17.04.0
 Akonadi Contacts Integration.
 
 %files -f %{name}.lang
+%{_sysconfdir}/xdg/akonadi-contacts.renamecategories
+%{_libdir}/qt5/plugins/akonadi_serializer_addressee.so
+%{_libdir}/qt5/plugins/akonadi_serializer_contactgroup.so
+%{_datadir}/akonadi/plugins/serializer/akonadi_serializer_addressee.desktop
+%{_datadir}/akonadi/plugins/serializer/akonadi_serializer_contactgroup.desktop
 %{_datadir}/kf5/akonadi/contact/
 %{_datadir}/kservices5/akonadi/contact/
 %{_datadir}/kservices5/akonadicontact_actions.desktop
@@ -120,5 +125,6 @@ based on %{name}.
 %install
 %ninja_install -C build
 %find_lang akonadicontact5
+%find_lang akonadicontact5-serializer
 %find_lang kcm_akonadicontact_actions
 cat *.lang >%{name}.lang
