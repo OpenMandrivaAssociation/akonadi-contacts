@@ -1,6 +1,6 @@
 Name:		akonadi-contacts
 Epoch:		3
-Version:	 18.08.0
+Version:	18.08.1
 Release:	1
 Summary:	Akonadi Contacts Integration
 License:	GPLv2+ and LGPLv2+
@@ -58,7 +58,6 @@ Akonadi Contacts Integration.
 %{_datadir}/kservicetypes5/kaddressbookimprotocol.desktop
 %{_qt5_plugindir}/kcm_akonadicontact_actions.so
 %{_sysconfdir}/xdg/akonadi-contacts.categories
-%{_sysconfdir}/xdg/contact-editor.categories
 %{_libdir}/qt5/plugins/akonadi/contacts/plugins/categorieseditwidgetplugin.so
 
 #--------------------------------------------------------------------
