@@ -1,6 +1,6 @@
 Name:		akonadi-contacts
 Epoch:		3
-Version:	19.04.1
+Version:	19.04.2
 Release:	1
 Summary:	Akonadi Contacts Integration
 License:	GPLv2+ and LGPLv2+
