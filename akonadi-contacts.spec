@@ -1,6 +1,6 @@
 Name:		akonadi-contacts
 Epoch:		3
-Version:	19.04.3
+Version:	19.07.80
 Release:	1
 Summary:	Akonadi Contacts Integration
 License:	GPLv2+ and LGPLv2+
@@ -47,17 +47,15 @@ Provides:	akonadi-social-utils-data = 3:17.04.0
 Akonadi Contacts Integration.
 
 %files -f %{name}.lang
-%{_sysconfdir}/xdg/akonadi-contacts.renamecategories
+%{_datadir}/qlogging-categories5/akonadi-contacts.categories
+%{_datadir}/qlogging-categories5/akonadi-contacts.renamecategories
 %{_libdir}/qt5/plugins/akonadi_serializer_addressee.so
 %{_libdir}/qt5/plugins/akonadi_serializer_contactgroup.so
 %{_datadir}/akonadi/plugins/serializer/akonadi_serializer_addressee.desktop
 %{_datadir}/akonadi/plugins/serializer/akonadi_serializer_contactgroup.desktop
 %{_datadir}/kf5/akonadi/contact/
-%{_datadir}/kservices5/akonadi/contact/
 %{_datadir}/kservices5/akonadicontact_actions.desktop
-%{_datadir}/kservicetypes5/kaddressbookimprotocol.desktop
 %{_qt5_plugindir}/kcm_akonadicontact_actions.so
-%{_sysconfdir}/xdg/akonadi-contacts.categories
 %{_libdir}/qt5/plugins/akonadi/contacts/plugins/categorieseditwidgetplugin.so
 
 #--------------------------------------------------------------------
