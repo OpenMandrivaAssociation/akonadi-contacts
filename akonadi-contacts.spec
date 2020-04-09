@@ -13,6 +13,7 @@ URL:		https://www.kde.org/
 %define ftpdir stable
 %endif
 Source0:	http://download.kde.org/%{ftpdir}/release-service/%{version}/src/%{name}-%{version}.tar.xz
+Patch0:		akonadi-contacts-qt-5.15.patch
 
 BuildRequires:	pkgconfig(Qt5Core)
 BuildRequires:	pkgconfig(Qt5Gui)
@@ -116,7 +117,7 @@ based on %{name}.
 #--------------------------------------------------------------------
 
 %prep
-%setup -q
+%autosetup -p1
 %cmake_kde5
 
 %build
