@@ -1,7 +1,7 @@
 Name:		akonadi-contacts
 Epoch:		3
-Version:	20.03.90
-Release:	2
+Version:	20.04.0
+Release:	1
 Summary:	Akonadi Contacts Integration
 License:	GPLv2+ and LGPLv2+
 Group:		Graphical desktop/KDE
@@ -13,7 +13,6 @@ URL:		https://www.kde.org/
 %define ftpdir stable
 %endif
 Source0:	http://download.kde.org/%{ftpdir}/release-service/%{version}/src/%{name}-%{version}.tar.xz
-Patch0:		akonadi-contacts-qt-5.15.patch
 
 BuildRequires:	pkgconfig(Qt5Core)
 BuildRequires:	pkgconfig(Qt5Gui)
