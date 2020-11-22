@@ -35,6 +35,7 @@ BuildRequires:	cmake(KF5KIO)
 BuildRequires:	cmake(KF5Mime)
 BuildRequires:	cmake(KF5Prison)
 BuildRequires:	cmake(KF5TextWidgets)
+BuildRequires:	cmake(KF5Libkleo)
 BuildRequires:	boost-devel
 Conflicts:	kdepimlibs-core < 3:16.04.3-2
 Obsoletes:	akonadi-contact-data < 3:17.04.0
