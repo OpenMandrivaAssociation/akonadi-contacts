@@ -1,6 +1,6 @@
 Name:		akonadi-contacts
 Epoch:		3
-Version:	21.07.80
+Version:	21.07.90
 Release:	1
 Summary:	Akonadi Contacts Integration
 License:	GPLv2+ and LGPLv2+
@@ -36,6 +36,7 @@ BuildRequires:	cmake(KF5Mime)
 BuildRequires:	cmake(KF5Prison)
 BuildRequires:	cmake(KF5TextWidgets)
 BuildRequires:	cmake(KF5Libkleo)
+BuildRequires:	cmake(KF5KCMUtils)
 BuildRequires:	boost-devel
 Conflicts:	kdepimlibs-core < 3:16.04.3-2
 Obsoletes:	akonadi-contact-data < 3:17.04.0
