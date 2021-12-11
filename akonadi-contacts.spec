@@ -1,6 +1,6 @@
 Name:		akonadi-contacts
 Epoch:		3
-Version:	21.08.3
+Version:	21.12.0
 Release:	1
 Summary:	Akonadi Contacts Integration
 License:	GPLv2+ and LGPLv2+
@@ -115,6 +115,7 @@ based on %{name}.
 %{_includedir}/KF5/ContactEditor
 %{_includedir}/KF5/contacteditor
 %{_libdir}/cmake/KF5ContactEditor
+%doc %{_docdir}/qt5/*.{qch,tags}
 
 #--------------------------------------------------------------------
 
