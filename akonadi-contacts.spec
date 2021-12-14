@@ -38,6 +38,9 @@ BuildRequires:	cmake(KF5TextWidgets)
 BuildRequires:	cmake(KF5Libkleo)
 BuildRequires:	cmake(KF5KCMUtils)
 BuildRequires:	boost-devel
+# For QCH format docs
+BuildRequires: doxygen
+BuildRequires: qt5-assistant
 Conflicts:	kdepimlibs-core < 3:16.04.3-2
 Obsoletes:	akonadi-contact-data < 3:17.04.0
 Conflicts:	akonadi-contact-data < 3:17.04.0
