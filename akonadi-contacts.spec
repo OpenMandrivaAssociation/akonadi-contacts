@@ -1,6 +1,6 @@
 Name:		akonadi-contacts
 Epoch:		3
-Version:	21.12.2
+Version:	22.03.80
 Release:	1
 Summary:	Akonadi Contacts Integration
 License:	GPLv2+ and LGPLv2+
@@ -110,13 +110,11 @@ This package contains header files needed if you wish to build applications
 based on %{name}.
 
 %files -n %{develname}
-%{_includedir}/KF5/Akonadi/Contact/
-%{_includedir}/KF5/akonadi/contact/
+%{_includedir}/KF5/AkonadiContact
+%{_includedir}/KF5/AkonadiContactEditor
 %{_libdir}/*.so
 %{_libdir}/cmake/KF5AkonadiContact/
 %{_libdir}/qt5/mkspecs/modules/*.pri
-%{_includedir}/KF5/ContactEditor
-%{_includedir}/KF5/contacteditor
 %{_libdir}/cmake/KF5ContactEditor
 %doc %{_docdir}/qt5/*.{qch,tags}
 
