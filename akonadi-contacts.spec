@@ -1,6 +1,6 @@
 Name:		akonadi-contacts
 Epoch:		3
-Version:	22.04.3
+Version:	22.07.90
 Release:	1
 Summary:	Akonadi Contacts Integration
 License:	GPLv2+ and LGPLv2+
@@ -60,9 +60,8 @@ Akonadi Contacts Integration.
 %{_datadir}/akonadi/plugins/serializer/akonadi_serializer_addressee.desktop
 %{_datadir}/akonadi/plugins/serializer/akonadi_serializer_contactgroup.desktop
 %{_datadir}/kf5/akonadi/contact/
-%{_datadir}/kservices5/akonadicontact_actions.desktop
-%{_libdir}/qt5/plugins/pim/kcms/kaddressbook/kcm_akonadicontact_actions.so
-%{_libdir}/qt5/plugins/akonadi/contacts/plugins/categorieseditwidgetplugin.so
+%{_libdir}/qt5/plugins/pim5/akonadi/contacts/plugins/categorieseditwidgetplugin.so
+%{_libdir}/qt5/plugins/pim5/kcms/kaddressbook/kcm_akonadicontact_actions.so
 
 #--------------------------------------------------------------------
 
