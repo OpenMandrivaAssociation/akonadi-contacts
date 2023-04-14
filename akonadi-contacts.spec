@@ -1,7 +1,7 @@
 Name:		akonadi-contacts
 Epoch:		3
-Version:	22.12.3
-Release:	2
+Version:	23.03.90
+Release:	1
 Summary:	Akonadi Contacts Integration
 License:	GPLv2+ and LGPLv2+
 Group:		Graphical desktop/KDE
@@ -66,36 +66,41 @@ Akonadi Contacts Integration.
 #--------------------------------------------------------------------
 
 %define major 5
-%define libname %mklibname KF5AkonadiContact %{major}
+%define oldlibname %mklibname KF5AkonadiContact 5
+%define libname %mklibname KPim5AkonadiContact
 
 %package -n %{libname}
 Summary:      Akonadi Contacts Integration main library
 Group:        System/Libraries
+%rename %{oldlibname}
 
 %description -n %{libname}
 Akonadi Contacts Integration main library.
 
 %files -n %{libname}
-%{_libdir}/libKF5AkonadiContact.so.%{major}*
+%{_libdir}/libKPim5AkonadiContact.so.%{major}*
 
 #--------------------------------------------------------------------
 
 %define major 5
-%define editorlibname %mklibname KF5ContactEditor %{major}
+%define oldeditorlibname %mklibname KF5ContactEditor 5
+%define editorlibname %mklibname KPim5ContactEditor
 
 %package -n %{editorlibname}
 Summary:      Akonadi Contacts Integration editor library
 Group:        System/Libraries
+%rename %{oldeditorlibname}
 
 %description -n %{editorlibname}
 Akonadi Contacts Integration editor library.
 
 %files -n %{editorlibname}
-%{_libdir}/libKF5ContactEditor.so.%{major}*
+%{_libdir}/libKPim5ContactEditor.so.%{major}*
 
 #--------------------------------------------------------------------
 
-%define develname %mklibname KF5AkonadiContact -d
+%define olddevelname %mklibname KF5AkonadiContact -d
+%define develname %mklibname KPim5AkonadiContact -d
 
 %package -n %{develname}
 Summary:        Devel stuff for %{name}
@@ -103,18 +108,21 @@ Group:          Development/KDE and Qt
 Requires:       %{name} = %{EVRD}
 Requires:       %{libname} = %{EVRD}
 Requires:       %{editorlibname} = %{EVRD}
+%rename %{olddevelname}
 
 %description -n %{develname}
 This package contains header files needed if you wish to build applications
 based on %{name}.
 
 %files -n %{develname}
-%{_includedir}/KF5/AkonadiContact
-%{_includedir}/KF5/AkonadiContactEditor
+%{_includedir}/KPim5/AkonadiContact
+%{_includedir}/KPim5/AkonadiContactEditor
 %{_libdir}/*.so
+%{_libdir}/cmake/KPim5AkonadiContact/
 %{_libdir}/cmake/KF5AkonadiContact/
 %{_libdir}/qt5/mkspecs/modules/*.pri
-%{_libdir}/cmake/KF5ContactEditor
+%{_libdir}/cmake/KPim5ContactEditor
+%{_libdir}/cmake/KF5AkonadiContactEditor/
 %doc %{_docdir}/qt5/*.{qch,tags}
 
 #--------------------------------------------------------------------
