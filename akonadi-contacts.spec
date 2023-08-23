@@ -1,6 +1,6 @@
 Name:		akonadi-contacts
 Epoch:		3
-Version:	23.04.3
+Version:	23.08.0
 Release:	1
 Summary:	Akonadi Contacts Integration
 License:	GPLv2+ and LGPLv2+
@@ -29,7 +29,7 @@ BuildRequires:	cmake(KF5Completion)
 BuildRequires:	cmake(KF5Codecs)
 BuildRequires:	cmake(KF5Contacts)
 BuildRequires:	cmake(KF5DBusAddons)
-BuildRequires:	cmake(KF5GrantleeTheme)
+BuildRequires:	cmake(KPim5GrantleeTheme)
 BuildRequires:	cmake(KF5IconThemes)
 BuildRequires:	cmake(KF5KIO)
 BuildRequires:	cmake(KF5Mime)
@@ -60,8 +60,6 @@ Akonadi Contacts Integration.
 %{_datadir}/akonadi/plugins/serializer/akonadi_serializer_addressee.desktop
 %{_datadir}/akonadi/plugins/serializer/akonadi_serializer_contactgroup.desktop
 %{_datadir}/kf5/akonadi/contact/
-%{_libdir}/qt5/plugins/pim5/akonadi/contacts/plugins/categorieseditwidgetplugin.so
-%{_libdir}/qt5/plugins/pim5/kcms/kaddressbook/kcm_akonadicontact_actions.so
 
 #--------------------------------------------------------------------
 
@@ -119,7 +117,6 @@ based on %{name}.
 %{_includedir}/KPim5/AkonadiContactEditor
 %{_libdir}/*.so
 %{_libdir}/cmake/KPim5AkonadiContact/
-%{_libdir}/cmake/KF5AkonadiContact/
 %{_libdir}/qt5/mkspecs/modules/*.pri
 %{_libdir}/cmake/KPim5ContactEditor
 %{_libdir}/cmake/KF5AkonadiContactEditor/
@@ -138,5 +135,4 @@ based on %{name}.
 %ninja_install -C build
 %find_lang akonadicontact5
 %find_lang akonadicontact5-serializer
-%find_lang kcm_akonadicontact_actions
 cat *.lang >%{name}.lang
