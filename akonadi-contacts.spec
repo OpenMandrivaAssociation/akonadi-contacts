@@ -1,8 +1,8 @@
 #define git 20240217
 %define gitbranch release/24.02
 %define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
-Name:		plasma6-akonadi-contacts
-Version:	25.04.0
+Name:		akonadi-contacts
+Version:	25.04.1
 Release:	%{?git:0.%{git}.}1
 Summary:	Akonadi Contacts Integration
 License:	GPLv2+ and LGPLv2+
@@ -49,6 +49,11 @@ BuildRequires:	boost-devel
 # For QCH format docs
 BuildRequires: doxygen
 BuildRequires: qt6-qttools-assistant
+# Renamed after 6.0 2025-05-25
+%rename plasma6-akonadi-contacts
+
+BuildSystem:	cmake
+BuildOption:	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
 
 %description
 Akonadi Contacts Integration.
@@ -70,6 +75,9 @@ Akonadi Contacts Integration.
 %package -n %{libname}
 Summary:      Akonadi Contacts Integration main library
 Group:        System/Libraries
+# Not a 1:1 replacement, but we need to get rid of old cruft
+Obsoletes:	%{mklibname KF5ContactEditor 5}
+Obsoletes:	%{mklibname KPim5ContactEditor}
 
 %description -n %{libname}
 Akonadi Contacts Integration main library.
@@ -102,6 +110,9 @@ Group:          Development/KDE and Qt
 Requires:       %{name} = %{EVRD}
 Requires:       %{libname} = %{EVRD}
 Requires:       %{wlibname} = %{EVRD}
+# Not a 1:1 replacement, but we need to get rid of old cruft
+Obsoletes:	%{mklibname -d KF5ContactEditor}
+Obsoletes:	%{mklibname -d KPim5ContactEditor}
 
 %description -n %{develname}
 This package contains header files needed if you wish to build applications
@@ -130,20 +141,3 @@ based on %{name} Widgets.
 %files -n %{wdevelname}
 %{_includedir}/KPim6/AkonadiContactWidgets
 %{_libdir}/cmake/KPim6AkonadiContactWidgets/
-
-#--------------------------------------------------------------------
-
-%prep
-%autosetup -p1 -n akonadi-contacts-%{?git:%{gitbranchd}}%{!?git:%{version}}
-%cmake \
-	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
-	-G Ninja
-
-%build
-%ninja -C build
-
-%install
-%ninja_install -C build
-%find_lang akonadicontact6
-%find_lang akonadicontact6-serializer
-cat *.lang >%{name}.lang
